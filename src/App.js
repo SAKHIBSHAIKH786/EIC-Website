@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import TeamContainer from './Components/team/team';
 import HomeLayoutHOC from './HOC/Home.HOC';
