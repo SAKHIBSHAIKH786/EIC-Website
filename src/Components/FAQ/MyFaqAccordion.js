@@ -15,8 +15,7 @@ const MyFaqSection = () => {
       <div className="flex flex-col my-4">
         {
           data.map((faq) => {
-            const {id} = faq;
-            return <FaqSection key={id} {...faq} />
+            return <FaqSection key={faq.id} {...faq} />
           })
         }
       </div>    

@@ -24,18 +24,18 @@ const HeroCarousal = () => {
 
 	const settings = {
 		dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true
+	    infinite: true,
+	    speed: 500,
+	    slidesToShow: 1,
+	    slidesToScroll: 1,
+	    autoplay: true
 	};
 
 	return (
 		<div className="my-4">
 		<HeroSlider {...settings}>
 			{CarousalImages.map((image) => (
-				<Carousal src={image} />
+				<Carousal key={image} src={image} />
 			))}
 		</HeroSlider>
 		</div>
