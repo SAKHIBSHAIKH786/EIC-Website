@@ -10,7 +10,7 @@ const TeamMembers = () => {
 		<>
 		<div className="flex flex-col items-center h-64 w-44 bg-white gap-5 rounded-lg border-2 border-white shadow-lg">
 			<div className="pattern h-1/2 w-full bg-card-200 rounded-t-lg">
-				<img src={arnav}
+				<img src="https://raw.githubusercontent.com/Electro-Infinity-Club/Team-Member-Images/master/arnav.jpg"
 					className="h-full w-32 m-auto rounded-full shadow-md object-cover object-top bg-white border border-white" />
 			</div>
 
