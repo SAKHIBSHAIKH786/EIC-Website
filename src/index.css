@@ -3,9 +3,8 @@
 @tailwind utilities;
 
 .App {
-	width: 75%;
+	max-width: 70%;
 	margin: auto;
-	height: 100vh;
 }
 
 .pattern {
