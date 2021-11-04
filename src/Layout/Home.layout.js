@@ -1,12 +1,12 @@
 import React from "react";
 import MyFaqSection from "../Components/FAQ/MyFaqAccordion";
-import HeroCarousal from "../Components/Carousal/HeroCarousal";
+import HeroSection from "../Components/HeroSection/HeroSection";
 import TeamContainer from "../Components/team/team";
 
 const HomeLayout = (props) => {
   return (
     <>
-      <HeroCarousal />
+      <HeroSection />
       {props.children}
       <TeamContainer />
       <MyFaqSection />

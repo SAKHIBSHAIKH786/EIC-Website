@@ -1,6 +1,5 @@
 import "./App.css";
 import Contact from "./Components/Contact/Contact";
-import TeamContainer from "./Components/team/team";
 import HomeLayoutHOC from "./HOC/Home.HOC";
 
 function App() {
