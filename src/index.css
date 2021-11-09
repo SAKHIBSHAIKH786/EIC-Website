@@ -2,17 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-.App {
-	width: 75%;
-	margin: auto;
-	height: 100vh;
-}
-
-.pattern {
-	background-image: url("topography.svg");
-	background-position: center;
-}
-
 body {
-	background-color: #080646;
+	background-color: #0f1f3d;
+}
+
+.App {
+	max-width: 70%;
+	margin: auto;
+}
+
+.social:hover {
+	background-color: white;
+	color: darkblue;
+	font-size: x-large;
+	transition: all 200ms;
+}
+
+.slick-dots li.slick-active button:before {
+	color: white;
+}
+
+.slide-container {
+	width: 55%;
+	height: 85vh;
+}
+
+.team-social:hover {
+	transform: scale(1.2);
+	transition: transform 100ms linear;
 }

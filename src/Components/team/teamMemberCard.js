@@ -1,30 +1,40 @@
-import React, { useState } from "react";
-import { Modal } from "./teamModal";
-import arnav from "./arnav.jpeg";
+import React from "react";
+import { FiInstagram, FiFacebook, FiLinkedin } from "react-icons/fi";
 
-const TeamMembers = () => {
-
-	const [ showModal, setShowModal ] = useState(false);
+const TeamMembers = ({fname,lname,post,image,bio}) => {
 
 	return (
 		<>
-		<div className="flex flex-col items-center h-64 w-44 bg-white gap-5 rounded-lg border-2 border-white shadow-lg">
-			<div className="pattern h-1/2 w-full bg-card-200 rounded-t-lg">
-				<img src="https://raw.githubusercontent.com/Electro-Infinity-Club/Team-Member-Images/master/arnav.jpg"
-					className="h-full w-32 m-auto rounded-full shadow-md object-cover object-top bg-white border border-white" />
-			</div>
-
-			<div className="text-center">
-				<h1 className="text-lg">Arnav Botre</h1>
-				<h3 className="text-md italic">President</h3>
-			</div>
-
-			<button className="hover:bg-blue-500 text-blue-600 hover:text-white px-1 pb-0.5 rounded shadow"
-        onClick={() => setShowModal(true)}>
-			  Know more
-			</button>			
-		</div>
-		<Modal showModal={showModal} setShowModal={setShowModal} />
+		<div className="relative w-1/4 my-12">
+			<div className="rounded overflow-hidden shadow-md bg-white">
+	      <div className="absolute -mt-20 w-full flex justify-center">
+	        <div className="h-36 w-36">
+	          <img
+	            src={image}
+	            alt="team member"
+	            className="rounded-full object-cover object-top h-full w-full shadow-md"
+	          />
+	        </div>
+	      </div>
+	      <div className="px-6 mt-16 mx-2 flex flex-col items-center text-center">
+	        <div className="font-bold text-3xl pb-1">
+	          <h1>{fname}</h1>
+	          <h1>{lname}</h1>
+	        </div>
+	        <p className="text-gray-800 text-lg italic">
+	          {post}
+	        </p>
+	        <p className="text-gray-600 text-base pt-3 font-normal">
+	          {bio}
+	        </p>
+	        <div className="w-full flex justify-center py-5 gap-6 text-xl">
+	          <a className="team-social cursor-pointer hover:text-blue-400"><FiFacebook /></a>
+	          <a className="team-social cursor-pointer hover:text-blue-400"><FiInstagram /></a>
+	          <a className="team-social cursor-pointer hover:text-blue-400"><FiLinkedin /></a>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
 		</>
 	);
 };

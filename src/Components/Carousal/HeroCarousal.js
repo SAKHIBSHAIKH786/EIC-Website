@@ -7,8 +7,8 @@ import "slick-carousel/slick/slick-theme.css";
 const Carousal = (props) => {
 	return (
 		<>
-			<div className="h-96 rounded-md">
-				<img src={props.src} className="w-full h-full rounded-md" alt="Image" />
+			<div className="rounded-md p-1">
+				<img src={props.src} className="w-full h-full rounded-md" />
 			</div>
 		</>
 	);
@@ -28,11 +28,12 @@ const HeroCarousal = () => {
 	    speed: 500,
 	    slidesToShow: 1,
 	    slidesToScroll: 1,
-	    autoplay: true
+	    autoplay: true,
+	    arrows: false
 	};
 
 	return (
-		<div className="my-4">
+		<div className="slide-container border-2 border-white rounded-md">
 		<HeroSlider {...settings}>
 			{CarousalImages.map((image) => (
 				<Carousal key={image} src={image} />
