@@ -6,7 +6,7 @@ import FooterSectionC from "./footerSectionC";
 const FooterSection = () => {
   return (
     <>
-    <footer className="w-full mx-auto justify-center bg-purple-800 items-center mt-6">
+    <footer className="w-full mx-auto justify-center bg-card-600 items-center mt-6">
       <FooterSectionA />
       <FooterSectionB />
       <FooterSectionC />
