@@ -27,10 +27,10 @@ const TeamMembers = ({fname,lname,post,image,bio}) => {
 	        <p className="text-gray-600 text-base pt-3 font-normal">
 	          {bio}
 	        </p>
-	        <div className="w-full flex justify-center pt-5 pb-5 gap-6 text-xl">
-	          <FiFacebook className="cursor-pointer hover:text-blue-400"/>
-	          <FiInstagram className="cursor-pointer hover:text-blue-400"/>
-	          <FiLinkedin className="cursor-pointer hover:text-blue-400"/>
+	        <div className="w-full flex justify-center py-5 gap-6 text-xl">
+	          <a className="team-social cursor-pointer hover:text-blue-400"><FiFacebook /></a>
+	          <a className="team-social cursor-pointer hover:text-blue-400"><FiInstagram /></a>
+	          <a className="team-social cursor-pointer hover:text-blue-400"><FiLinkedin /></a>
 	        </div>
 	      </div>
 	    </div>
