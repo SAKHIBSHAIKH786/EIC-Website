@@ -1,15 +1,14 @@
-/* This example requires Tailwind CSS v2.0+ */
 import { Disclosure } from "@headlessui/react";
 import { HiMenuAlt1 } from "react-icons/hi";
 import { IoCloseOutline } from "react-icons/io5";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import logo from "../Footer/logo.png";
 
 const navigation = [
-  { name: "Home", href: "#", current: true },
-  { name: "Events", href: "#", current: false },
-  { name: "Team", href: "#", current: false },
-  { name: "Contact", href: "#", current: false },
-  { name: "?", href: "#", current: false },
+  { name: "Home", href: "/" },
+  { name: "Events", href: "/events" },
+  { name: "Team", href: "/team" },
+  { name: "Contact", href: "/contact" },
 ];
 
 function classNames(...classes) {
@@ -39,21 +38,23 @@ const Navbar = () => {
               </div>
               <div className="flex-1 flex items-center mx-8 sm:items-stretch sm:justify-between">
                 <div className="flex-shrink-0 flex items-center">
-                  <img
-                    className="block lg:hidden h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
-                    alt="Workflow"
-                  />
-                  <img
-                    className="hidden lg:block h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg"
-                    alt="Workflow"
-                  />
+                  <NavLink to="/">
+                    <img
+                      className="block lg:hidden h-12 w-auto rounded-3xl"
+                      src={logo}
+                      alt="ElectroInfinity"
+                    />
+                    <img
+                      className="hidden lg:block h-12 w-auto rounded-3xl"
+                      src={logo}
+                      alt="ElectroInfinity"
+                    />
+                  </NavLink>
                 </div>
-                <div className="hidden sm:block sm:ml-6">
+                <div className="hidden sm:block sm:ml-6 mt-2">
                   <div className="flex space-x-4">
                     {navigation.map(item => (
-                      <Link
+                      <NavLink
                         key={item.name}
                         to={item.href}
                         className={classNames(
@@ -62,10 +63,11 @@ const Navbar = () => {
                             : "text-gray-300 hover:bg-gray-700 hover:text-white",
                           "px-3 py-2 rounded-md text-sm font-medium"
                         )}
-                        aria-current={item.current ? "page" : undefined}
+                        exact
+                        activeClassName="bg-gray-900 text-white"
                       >
                         {item.name}
-                      </Link>
+                      </NavLink>
                     ))}
                   </div>
                 </div>
@@ -78,15 +80,16 @@ const Navbar = () => {
               {navigation.map(item => (
                 <Disclosure.Button
                   key={item.name}
-                  as="a"
-                  href={item.href}
+                  as={NavLink}
+                  to={item.href}
                   className={classNames(
                     item.current
                       ? "bg-gray-900 text-white"
                       : "text-gray-300 hover:bg-gray-700 hover:text-white",
                     "block px-3 py-2 rounded-md text-base font-medium text-center"
                   )}
-                  aria-current={item.current ? "page" : undefined}
+                  exact
+                  activeClassName="bg-gray-900 text-white"
                 >
                   {item.name}
                 </Disclosure.Button>

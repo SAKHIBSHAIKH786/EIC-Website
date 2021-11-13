@@ -1,0 +1,40 @@
+{
+  "upcoming": [
+    {
+      "id": 1,
+      "img": "https://raw.githubusercontent.com/Electro-Infinity-Club/Team-Member-Images/master/arnav.jpg",
+      "title": "Picturesque 2021 📸",
+      "date": "7 March 20201",
+      "info": "Photography contest",
+      "link": "https://www.linkedin.com/company/itesa-dyp/mycompany/",
+      "open": "false",
+      "linkedin": "https://www.linkedin.com/posts/,itesa-dyp_itesa-dypcoe-photography-activity-6773164635530006528-xtS4",
+      "instagram": "https://www.instagram.com/p/CMRD1JApDx9/?utm_source:ig_web_copy_link"
+    }
+  ],
+
+  "past": [
+    {
+      "id": 2,
+      "img": "https://res.cloudinary.com/sjdev/image/upload/v1618480584/ITESA-TEAM/Events-Images/image2_kmigrr.jpg",
+      "title": "Literacy campaign",
+      "date": "13 June 2001",
+      "info": "This is another flagship event conducted by the department every year, here we students go from our college to primary school and teach students between 4th to 10th about how a computer works and its internal components",
+      "link": "https://www.linkedin.com/company/itesa-dyp/mycompany/",
+      "open": "false",
+      "linkedin": "https://www.linkedin.com/company/itesa-dyp/mycompany/",
+      "instagram": "https://www.instagram.com/itesa.dyp/"
+    },
+    {
+      "id": 3,
+      "img": "https://res.cloudinary.com/sjdev/image/upload/v1618480582/ITESA-TEAM/Events-Images/image3_rmi7fx.jpg",
+      "title": "Gadget Gyan",
+      "date": "13 June 2001",
+      "info": "In this event the students of our department taught high school students the mechanism of how a computer works and a detailed explaination of each hardware components.This is one of the oldest events of our college.",
+      "link": "https://www.linkedin.com/company/itesa-dyp/mycompany/",
+      "open": "false",
+      "linkedin": "https://www.linkedin.com/company/itesa-dyp/mycompany/",
+      "instagram": "https://www.instagram.com/itesa.dyp/"
+    }
+  ]
+}

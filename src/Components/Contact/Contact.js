@@ -8,8 +8,8 @@ const Contact = () => {
     department: "",
     yearOfStudy: "",
     isLocationPune: "",
-    question0: "",
     question1: "",
+    question2: "",
   });
 
   const handleChange = name => e => {
@@ -26,8 +26,8 @@ const Contact = () => {
   return (
     <>
       <div>
-        <div className="md:grid">
-          <div className="lg:w-1/2 sm:w-full mt-5 lg:mx-auto items-center md:mt-0 md:col-span-6">
+        <div className="md:grid mt-8">
+          <div className="lg:w-2/4 sm:w-full mt-5 lg:mx-auto items-center md:mt-0 ">
             <form onSubmit={handleSubmit}>
               <div className="shadow sm:rounded-md sm:overflow-hidden">
                 <div className="px-4 py-5 bg-white space-y-6 sm:p-6">
@@ -82,46 +82,46 @@ const Contact = () => {
                         />
                       </div>
                       <label
-                        htmlFor="studentDepartment"
+                        htmlFor="studentName"
                         className="block text-sm font-medium text-gray-700 mt-2"
                       >
                         Department
                       </label>
-                      <div className="mt-1 flex w-1/6 items-center">
+                      <div className="mt-1 flex w-1/4 items-center">
                         <input
-                          id="radio9"
+                          id="yearOfStudy"
                           type="radio"
-                          name="radio"
+                          name="yearOfStudy"
+                          className="p-2  outline-none flex-1 block w-full rounded-none rounded-r-md sm:text-sm"
                           value="CS"
-                          className="p-2 outline-none flex-1 block w-full rounded-none rounded-r-md sm:text-sm"
                           onChange={handleChange("department")}
                         />
-                        <p>CS</p>
+                        <p>Computer</p>
                       </div>
-                      <div className="mt-1 flex w-1/5 items-center">
+                      <div className="mt-1 flex w-1/4 items-center">
                         <input
-                          id="radio9"
+                          id="yearOfStudy"
                           type="radio"
-                          name="radio"
+                          name="yearOfStudy"
+                          className="p-2  outline-none flex-1 block w-full rounded-none rounded-r-md sm:text-sm"
                           value="MECH"
-                          className="p-2 outline-none flex-1 block w-full rounded-none rounded-r-md sm:text-sm"
                           onChange={handleChange("department")}
                         />
-                        <p>MECH</p>
+                        <p>Mechanical</p>
                       </div>
-                      <div className="mt-1 flex w-1/5 items-center">
+                      <div className="mt-1 flex w-1/4 items-center">
                         <input
-                          id="radio9"
+                          id="yearOfStudy"
                           type="radio"
-                          name="radio"
+                          name="yearOfStudy"
+                          className="p-2  outline-none flex-1 block w-full rounded-none rounded-r-md sm:text-sm"
                           value="E&TC"
-                          className="p-2 outline-none flex-1 block w-full rounded-none rounded-r-md sm:text-sm"
                           onChange={handleChange("department")}
                         />
-                        <p>E&TC</p>
+                        <p>Electronics</p>
                       </div>
                       <label
-                        htmlFor="studentName"
+                        htmlFor="studentYearOfStudy"
                         className="block text-sm font-medium text-gray-700 mt-2"
                       >
                         Year of study
@@ -139,7 +139,7 @@ const Contact = () => {
                       </div>
                       <div className="mt-1 flex w-1/6 items-center">
                         <input
-                          id="radio2"
+                          id="radio1"
                           type="radio"
                           value="SE"
                           name="radio"
@@ -150,7 +150,7 @@ const Contact = () => {
                       </div>
                       <div className="mt-1 flex w-1/6 items-center">
                         <input
-                          id="radio3"
+                          id="radio1"
                           type="radio"
                           value="TE"
                           name="radio"
@@ -161,7 +161,7 @@ const Contact = () => {
                       </div>
                       <div className="mt-1 flex w-1/6 items-center">
                         <input
-                          id="radio4"
+                          id="radio1"
                           type="radio"
                           value="BE"
                           name="radio"
