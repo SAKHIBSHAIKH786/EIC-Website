@@ -2,23 +2,126 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	background-color: #0f1f3d;
+	font-family: 'Fira Sans', sans-serif;
 }
 
 .App {
-	max-width: 70%;
+	max-width: 80%;
 	margin: auto;
 }
 
-.social:hover {
-	background-color: white;
-	color: darkblue;
-	font-size: x-large;
-	transition: all 200ms;
+/* Page load sliding animation */
+@keyframes slideInFromLeft {
+	0% {
+		transform: translateX(-60%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0%);
+		opacity: 1;
+	}
 }
 
-.slick-dots li.slick-active button:before {
+@keyframes slideInFromRight {
+	0% {
+		transform: translateX(60%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0%);
+		opacity: 1;
+	}
+}
+
+@keyframes slideInFromAbove {
+	0% {
+		transform: translateY(-100%);
+	}
+	100% {
+		transform: translateY(0%);
+	}
+}
+
+/* Hero Section */
+.hero {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 1.5rem;
+	height: 100vh;
+	background-image: url("./Components/HeroSection/heroBg.jpg");
+	background-size: cover;
+}
+
+.heroText {
+	font-size: 6rem;
+	color: white;
+	text-decoration-line: underline;
+	text-decoration-style: double;
+	text-decoration-color: #c2d1f0;
+	padding-top: 8%;
+	animation: slideInFromLeft 500ms ease-out 0s 1;
+}
+
+.heroSubText {
+	font-size: 2rem;
+	color: white;
+	text-decoration-line: underline;
+	text-decoration-style: solid;
+	text-decoration-color: #c2d1f0;
+	animation: slideInFromRight 500ms ease-out 0s 1;
+}
+
+.float-button {
+	position: fixed;
+	bottom: 5%;
+	right: 3%;
+	text-align: center;
+	font-size: 2.5rem;
+	padding: 0.4rem;
+	border-radius: 50%;
+	background-color: white;
+	color: black;
+}
+
+/* Navigation */
+nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1;
+	animation: slideInFromAbove 500ms ease-out 0s 1;
+}
+
+.nav-links {
+	padding: 2px 4px;
+	font-size: 1.5rem;
+	color: #e8f0ff;
+	border-radius: 6px;
+}
+
+.nav-links:hover {
+	background-color: #e8f0ff;
+	color: #1d3464;
+	transition: all 100ms;
+}
+
+/* Slick carousal package styling */
+.slick-dots li.slick-active button::before {
 	color: white;
 }
 
@@ -27,7 +130,37 @@ body {
 	height: 85vh;
 }
 
+/* Team member social link */
 .team-social:hover {
 	transform: scale(1.2);
 	transition: transform 100ms linear;
+}
+
+.member-image {
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* FAQ section */
+.faq::after {
+	content: '';
+	display: block;
+	margin: 4px 0px;
+	height: 0.1rem;
+	background-color: gray;
+}
+
+.faq-q::after {
+	content: '';
+	display: block;
+	margin: 0.3rem 0.5rem;
+	height: 0.05rem;
+	background-color: lightgray;
+}
+
+/* Club social links in Footer */
+.social:hover {
+	background-color: white;
+	color: #29488b;
+	transform: scale(1.3);
+	transition: all 200ms;
 }

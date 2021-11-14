@@ -1,14 +1,25 @@
-import "./App.css";
+import { Route, Switch } from "react-router-dom";
+
+// Components
+import TeamContainer from "./Components/Team/team";
 import Contact from "./Components/Contact/Contact";
-import HomeLayoutHOC from "./HOC/Home.HOC";
+
+// Pages
+import Events from "./Pages/Events";
+import Home from "./Pages/Home";
 
 function App() {
   return (
-    //max-w-7xl mx-auto px-2 sm:px-6 lg:px-8
-    <div className="App">
-      <HomeLayoutHOC path="/" exact component={Contact} />
-    </div>
+    <Switch>
+      <Route exact path="/" component={Home} />
+      <div className="App">
+        <Route path="/team" component={TeamContainer} />
+        {/*<Route path="/events" component={Events} />*/}
+        <Route path="/contact" component={Contact} />
+        {/* <Route path="*" component={PageNotFound} /> */}
+      </div>          
+    </Switch>
   );
-}
+};
 
 export default App;
