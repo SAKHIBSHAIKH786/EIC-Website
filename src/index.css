@@ -141,6 +141,11 @@ nav {
 }
 
 /* FAQ section */
+.faq-section {
+ 	max-width: 80%;
+ 	margin: auto;
+}
+
 .faq::after {
 	content: '';
 	display: block;
