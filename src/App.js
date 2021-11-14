@@ -1,7 +1,7 @@
 import { Route, Switch } from "react-router-dom";
 
 // Components
-import TeamContainer from "./Components/Team/team";
+import TeamContainer from "./Components/team/team";
 import Contact from "./Components/Contact/Contact";
 
 // Pages

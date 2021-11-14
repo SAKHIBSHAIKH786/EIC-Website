@@ -25,11 +25,6 @@ const TeamContainer = () => {
     				</div>
           </div>
         </div>
-        <div className="hidden sm:block" aria-hidden="true">
-	        <div className="py-5">
-	          <div className="border-b border-gray-200" />
-	        </div>
-      	</div>
       </section>
     </>
   );
