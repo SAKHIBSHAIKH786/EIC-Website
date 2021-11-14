@@ -23,7 +23,7 @@ const FaqAccordion = ({ question, answer }) => {
               </Disclosure.Button>
 
               <Disclosure.Panel className="bg-blue-200 rounded-b-md">
-                <div className="px-2 pb-8 text-lg text-black">{answer}</div>
+                <div className="px-2 py-2 text-lg text-black">{answer}</div>
               </Disclosure.Panel>
             </>
           )}
