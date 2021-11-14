@@ -1,15 +1,15 @@
-import React from "react";
-import MyFaqSection from "../Components/FAQ/MyFaqAccordion";
-import HeroCarousal from "../Components/Carousal/HeroCarousal";
+// import React from "react";
+// import MyFaqSection from "../Components/FAQ/MyFaqAccordion";
+// import TeamContainer from "../Components/Team/team";
 
-const HomeLayout = (props) => {
-  return (
-    <>
-      <HeroCarousal />
-      {props.children}
-      <MyFaqSection />
-    </>
-  );
-};
+// const HomeLayout = (props) => {
+//   return (
+//     <>
+//       {props.children}
+//       {/*<TeamContainer />
+//       <MyFaqSection />*/}
+//     </>
+//   );
+// };
 
-export default HomeLayout;
+// export default HomeLayout;

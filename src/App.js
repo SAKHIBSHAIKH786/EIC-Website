@@ -1,13 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-import TeamContainer from './Components/team/team';
-import HomeLayoutHOC from './HOC/Home.HOC';
+import { Route, Switch } from "react-router-dom";
+
+// Components
+import TeamContainer from "./Components/Team/team";
+import Contact from "./Components/Contact/Contact";
+
+// Pages
+import Events from "./Pages/Events";
+import Home from "./Pages/Home";
 
 function App() {
   return (
-    <div className="App">
-      <HomeLayoutHOC path="/" exact component={TeamContainer}/>
-    </div>
+    <Switch>
+      <Route exact path="/" component={Home} />
+      <div className="App">
+        <Route path="/team" component={TeamContainer} />
+        {/*<Route path="/events" component={Events} />*/}
+        <Route path="/contact" component={Contact} />
+        {/* <Route path="*" component={PageNotFound} /> */}
+      </div>          
+    </Switch>
   );
 };
 
