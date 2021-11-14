@@ -1,7 +1,8 @@
+import react from "react";
 import { Route, Switch } from "react-router-dom";
 
 // Components
-import TeamContainer from "./Components/Team/team";
+import TeamContainer from "./Components/team/team";
 import Contact from "./Components/Contact/Contact";
 
 // Pages
@@ -17,7 +18,7 @@ function App() {
         {/*<Route path="/events" component={Events} />*/}
         <Route path="/contact" component={Contact} />
         {/* <Route path="*" component={PageNotFound} /> */}
-      </div>          
+      </div>       
     </Switch>
   );
 };
