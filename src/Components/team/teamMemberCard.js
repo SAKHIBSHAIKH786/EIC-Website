@@ -1,7 +1,16 @@
 import React from "react";
 import { FiInstagram, FiMail, FiLinkedin } from "react-icons/fi";
 
-const TeamMembers = ({ fname, lname, post, image, bio, instagram, linkedin, email }) => {
+const TeamMembers = ({
+  fname,
+  lname,
+  post,
+  image,
+  bio,
+  instagram,
+  linkedin,
+  email,
+}) => {
   return (
     <>
       <div className="relative w-1/4 my-12">

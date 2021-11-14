@@ -1,6 +1,9 @@
-import { Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 // Components
+import Navbar from "./Components/Navbar/Navbar";
+import ToTopButton from "./Components/Navbar/toTopButton";
+import Footer from "./Components/Footer/footer";
 import TeamContainer from "./Components/team/team";
 import Contact from "./Components/Contact/Contact";
 
@@ -8,17 +11,20 @@ import Contact from "./Components/Contact/Contact";
 // import Events from "./Pages/Events";
 import Home from "./Pages/Home";
 
-function App() {
+const App = () => {
   return (
-    <Switch>
-      <Route exact path="/" component={Home} />
-      <div className="App">
+    <BrowserRouter>
+      <Navbar />
+      <ToTopButton />
+      <Switch>
+        <Route exact path="/" component={Home} />
         <Route path="/team" component={TeamContainer} />
         {/*<Route path="/events" component={Events} />*/}
         <Route path="/contact" component={Contact} />
         {/* <Route path="*" component={PageNotFound} /> */}
-      </div>          
-    </Switch>
+      </Switch>
+      <Footer />
+    </BrowserRouter>
   );
 };
 
