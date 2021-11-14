@@ -67,7 +67,7 @@ const Register = () => {
               <div className="linkToJoin" style={{ textAlign: "center" }}>
                 <a
                   className="discordLink"
-                  href="/"
+                  href="https://forms.gle/fjxAKbc9vYUsCPHz6"
                   target="_blank"
                   rel="noreferrer"
                 >
