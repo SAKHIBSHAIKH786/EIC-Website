@@ -1,7 +1,6 @@
 import React from "react";
 import eventData from "../helper/eventApi.json";
 import EventCard from "../Components/Event/EventCard";
-// import "../Pages/Events.css";
 
 const Events = () => {
   return (

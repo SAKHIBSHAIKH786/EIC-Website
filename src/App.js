@@ -8,7 +8,6 @@ import TeamContainer from "./Components/team/team";
 import Contact from "./Components/Contact/Contact";
 
 // Pages
-// import Events from "./Pages/Events";
 import Home from "./Pages/Home";
 
 const App = () => {
@@ -19,7 +18,6 @@ const App = () => {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/team" component={TeamContainer} />
-        {/*<Route path="/events" component={Events} />*/}
         <Route path="/contact" component={Contact} />
         {/* <Route path="*" component={PageNotFound} /> */}
       </Switch>

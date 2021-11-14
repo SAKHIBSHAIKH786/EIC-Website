@@ -8,9 +8,11 @@ const Home = () => {
   return (
     <>
       <HeroSection />
-      <Events />
-      <Register />
-      <Faq />
+      <div className="subHeroSection">
+        <Events />
+        <Register />
+        <Faq />
+      </div>
     </>
   );
 };

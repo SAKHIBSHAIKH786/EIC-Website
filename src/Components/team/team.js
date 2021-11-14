@@ -9,9 +9,9 @@ const TeamContainer = () => {
     <>
       <section className="container" id="team-section">
         <div className="container flex justify-center mx-auto pt-16">
-          <h2 className="text-white text-2xl text-center pb-6">
+          <h1 className="text-white text-3xl text-center pb-6">
             MEET OUR TEAM
-          </h2>
+          </h1>
         </div>
 
         {/* <TeamMember /> */}
