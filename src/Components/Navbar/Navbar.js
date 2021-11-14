@@ -6,7 +6,7 @@ import logo from "../Footer/logo.png";
 
 const navigation = [
   { name: "Home", href: "/" },
-  { name: "Events", href: "/events" },
+  // { name: "Events", href: "/events" },
   { name: "Team", href: "/team" },
   { name: "Contact", href: "/contact" },
 ];
@@ -17,7 +17,7 @@ function classNames(...classes) {
 
 const Navbar = () => {
   return (
-    <Disclosure as="nav" className="bg-gray-800">
+    <Disclosure as="nav" className="bg-transparent">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">

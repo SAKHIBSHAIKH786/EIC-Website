@@ -41,6 +41,7 @@ const FooterSectionB = () => {
             <a
               href="mailto:electroinfinity@gmail.com"
               className="hover:underline"
+              rel="noopener noreferrer"
             >
               electroinfinity@gmail.com
             </a>

@@ -3,39 +3,33 @@ import TeamMembers from "./teamMemberCard";
 import { TeamData } from "./teamData";
 
 const TeamContainer = () => {
-
-	const [data, setData] = useState(TeamData);
+  const [data] = useState(TeamData);
 
   return (
     <>
-      <div className="container">
+      <section className="container" id="team-section">
         <div className="container flex justify-center mx-auto pt-16">
-          <div>
-            <p className="text-white text-2xl text-center font-normal pb-6">
-              MEET OUR TEAM
-            </p>
-            <h1 className="xl:text-4xl text-3xl text-center text-white font-extrabold pb-6 sm:w-4/6 w-5/6 mx-auto">
-              The Talented People Behind the Scenes of the Club
-            </h1>
-          </div>
+          <h2 className="text-white text-2xl text-center pb-6">
+            MEET OUR TEAM
+          </h2>
         </div>
 
         {/* <TeamMember /> */}
         <div className="w-full mt-10 px-3 pt-3 ">
           <div className="container mx-auto">
-          	<div className="flex flex-wrap-reverse justify-center gap-6">
-            	{data.map((info) => (
-								<TeamMembers key={info.id} {...info} />
-							))}
-    				</div>
+            <div className="flex flex-wrap-reverse justify-center gap-6">
+              {data.map(info => (
+                <TeamMembers key={info.id} {...info} />
+              ))}
+            </div>
           </div>
         </div>
         <div className="hidden sm:block" aria-hidden="true">
-	        <div className="py-5">
-	          <div className="border-b border-gray-200" />
-	        </div>
-      	</div>
-      </div>
+          <div className="py-5">
+            <div className="border-b border-gray-200" />
+          </div>
+        </div>
+      </section>
     </>
   );
 };

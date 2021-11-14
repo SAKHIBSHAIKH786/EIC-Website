@@ -32,7 +32,7 @@ const EventCard = props => {
                 className="team-social cursor-pointer hover:text-blue-400"
                 href={event.linkedin}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 <FiFacebook />
               </a>
@@ -40,7 +40,7 @@ const EventCard = props => {
                 className="team-social cursor-pointer hover:text-blue-400"
                 href={event.instagram}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 {" "}
                 <FiInstagram />
@@ -49,7 +49,7 @@ const EventCard = props => {
                 className="team-social cursor-pointer hover:text-blue-400"
                 href={event.linkedin}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 <FiLinkedin />
               </a>

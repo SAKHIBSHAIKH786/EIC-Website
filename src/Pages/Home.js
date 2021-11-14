@@ -1,11 +1,15 @@
 import React from "react";
-import HeroCarousal from "../Components/Carousal/HeroCarousal";
-import Faq from "../Components/FAQ/MyFaqAccordion";
+import HeroSection from "../Components/HeroSection/HeroSection";
+import Faq from "../Components/FAQ/FaqSection";
+import Events from "./Events";
+import Register from "../Components/Register/Register";
 
 const Home = () => {
   return (
     <>
-      <HeroCarousal />
+      <HeroSection />
+      <Events />
+      <Register />
       <Faq />
     </>
   );

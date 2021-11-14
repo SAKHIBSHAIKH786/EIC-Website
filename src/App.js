@@ -1,15 +1,31 @@
-import "./App.css";
-import Contact from "./Components/Contact/Contact";
-import HomeLayoutHOC from "./HOC/Home.HOC";
-import Events from "./Pages/Events";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-function App() {
+// Components
+import Navbar from "./Components/Navbar/Navbar";
+import ToTopButton from "./Components/Navbar/toTopButton";
+import Footer from "./Components/Footer/footer";
+import TeamContainer from "./Components/team/team";
+import Contact from "./Components/Contact/Contact";
+
+// Pages
+// import Events from "./Pages/Events";
+import Home from "./Pages/Home";
+
+const App = () => {
   return (
-    //max-w-7xl mx-auto px-2 sm:px-6 lg:px-8
-    <div className="App">
-      <HomeLayoutHOC path="/" exact component={Events} />
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <ToTopButton />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/team" component={TeamContainer} />
+        {/*<Route path="/events" component={Events} />*/}
+        <Route path="/contact" component={Contact} />
+        {/* <Route path="*" component={PageNotFound} /> */}
+      </Switch>
+      <Footer />
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
