@@ -8,7 +8,7 @@ export const TeamData = [
         bio: "Arnav is a bad person. Very very Bad Person. Arnav is a bad person. Very very Bad Person.",
         instagram:  "Instagram ID here",
         linkedin:   "LinkedIn ID here",
-        github : "Github ID here"
+        email : "email ID here"
     },
     {
         id: 9,
@@ -19,7 +19,7 @@ export const TeamData = [
         bio: "Arnav is a bad person. Very very Bad Person. Arnav is a bad person. Very very Bad Person.",
         instagram:  "Instagram ID here",
         linkedin:   "LinkedIn ID here",
-        github : "Github ID here"
+        email : "email ID here"
     },
     {
         id: 8,
@@ -30,7 +30,7 @@ export const TeamData = [
         bio: "Arnav is a bad person. Very very Bad Person. Arnav is a bad person. Very very Bad Person.",
         instagram:  "Instagram ID here",
         linkedin:   "LinkedIn ID here",
-        github : "Github ID here"
+        email : "email ID here"
     },
     {
         id: 7,
@@ -41,7 +41,7 @@ export const TeamData = [
         bio: "Arnav is a bad person. Very very Bad Person. Arnav is a bad person. Very very Bad Person.",
         instagram:  "Instagram ID here",
         linkedin:   "LinkedIn ID here",
-        github : "Github ID here"
+        email : "email ID here"
     },
     {
         id: 6,
@@ -52,7 +52,7 @@ export const TeamData = [
         bio: "Arnav is a bad person. Very very Bad Person. Arnav is a bad person. Very very Bad Person.",
         instagram:  "Instagram ID here",
         linkedin:   "LinkedIn ID here",
-        github : "Github ID here"
+        email : "email ID here"
     },
     {
         id: 5,
@@ -63,7 +63,7 @@ export const TeamData = [
         bio: "Arnav is a bad person. Very very Bad Person. Arnav is a bad person. Very very Bad Person.",
         instagram:  "Instagram ID here",
         linkedin:   "LinkedIn ID here",
-        github : "Github ID here"
+        email : "email ID here"
     },  
     {
         id: 2,
@@ -74,7 +74,7 @@ export const TeamData = [
         bio: "Arnav is a bad person. Very very Bad Person. Arnav is a bad person. Very very Bad Person.",
         instagram:  "Instagram ID here",
         linkedin:   "LinkedIn ID here",
-        github : "Github ID here"
+        email : "email ID here"
     },
     {
         id: 3,
@@ -85,7 +85,7 @@ export const TeamData = [
         bio: "Arnav is a bad person. Very very Bad Person. Arnav is a bad person. Very very Bad Person.",
         instagram:  "Instagram ID here",
         linkedin:   "LinkedIn ID here",
-        github : "Github ID here"
+        email : "email ID here"
     },
     {
         id: 4,
@@ -96,7 +96,7 @@ export const TeamData = [
         bio: "Arnav is a bad person. Very very Bad Person. Arnav is a bad person. Very very Bad Person.",
         instagram:  "Instagram ID here",
         linkedin:   "LinkedIn ID here",
-        github : "Github ID here"
+        email : "email ID here"
     },
     {
         id: 1,
@@ -104,9 +104,9 @@ export const TeamData = [
         lname: "Botre",
         post: "President",
         image: "https://raw.githubusercontent.com/Electro-Infinity-Club/Team-Member-Images/master/arnav.jpg",
-        bio: "Arnav is a bad person. Very very Bad Person. Arnav is a bad person. Very very Bad Person.",
-        instagram:  "Instagram ID here",
-        linkedin:   "LinkedIn ID here",
-        github : "Github ID here"
+        bio: "Arnav is a pre-final year student and the FOUNDER of Electro Infinity club. He is a diligent and enthusiast student in the electronics domain. In his free time he loves hiking and playing sports.",
+        instagram:  "https://www.instagram.com/arnav_botre14/",
+        linkedin:   "https://www.linkedin.com/in/arnav-botre-b2a7591b2/",
+        email : "botrearnav@gmail.com"
     }
 ];

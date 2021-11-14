@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        card: {
+        club: {
           50: '#e8f0ff',
           100: '#c2d1f0',
           200: '#9bb3e2',

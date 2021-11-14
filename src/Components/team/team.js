@@ -8,16 +8,11 @@ const TeamContainer = () => {
 
   return (
     <>
-      <div className="container">
-        <div className="container flex justify-center mx-auto pt-16">
-          <div>
-            <p className="text-white text-2xl text-center font-normal pb-6">
-              MEET OUR TEAM
-            </p>
-            <h1 className="xl:text-4xl text-3xl text-center text-white font-extrabold pb-6 sm:w-4/6 w-5/6 mx-auto">
-              The Talented People Behind the Scenes of the Club
-            </h1>
-          </div>
+      <section className="container" id="team-section">
+        <div className="container flex justify-center mx-auto pt-16">         
+          <h2 className="text-white text-2xl text-center pb-6">
+            MEET OUR TEAM
+          </h2>       
         </div>
 
         {/* <TeamMember /> */}
@@ -35,7 +30,7 @@ const TeamContainer = () => {
 	          <div className="border-b border-gray-200" />
 	        </div>
       	</div>
-      </div>
+      </section>
     </>
   );
 };
