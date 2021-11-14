@@ -10,25 +10,20 @@ const FooterSectionB = () => {
           <img src={logo} className="rounded-full" alt="club logo" />
         </div>
         <div className="text-white text-left">
-          <p className="text-lg font-semibold">Navigate:</p>
-          <div className="pl-4">
-            <li className="list-none">
-              <Link to="/" className="hover:underline ">
+          <p className="text-lg font-semibold pb-2">Navigate</p>
+          <div>
+            <li >
+              <Link to="/" className="hover:underline">
                 Home
               </Link>
             </li>
-            <li className="list-none">
-              <Link to="/events" className="hover:underline ">
-                Events
-              </Link>
-            </li>
-            <li className="list-none">
-              <Link to="/team" className="hover:underline ">
+            <li >
+              <Link to="/team" className="hover:underline">
                 Team
               </Link>
             </li>
-            <li className="list-none">
-              <Link to="/contact" className="hover:underline ">
+            <li >
+              <Link to="/contact" className="hover:underline">
                 Contact
               </Link>
             </li>
