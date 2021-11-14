@@ -5,7 +5,7 @@ import TeamContainer from "./Components/Team/team";
 import Contact from "./Components/Contact/Contact";
 
 // Pages
-import Events from "./Pages/Events";
+// import Events from "./Pages/Events";
 import Home from "./Pages/Home";
 
 function App() {
