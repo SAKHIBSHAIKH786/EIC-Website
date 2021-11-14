@@ -1,33 +1,35 @@
-import { Disclosure } from '@headlessui/react'
-import {BiChevronDown, BiChevronUp} from "react-icons/bi";
-import { faqs } from "./faqData";
+import { Disclosure } from "@headlessui/react";
+import { BiChevronDown, BiChevronUp } from "react-icons/bi";
+// import { faqs } from "./faqData";
 
-const FaqAccordion = ({question,answer}) => {
+const FaqAccordion = ({ question, answer }) => {
   return (
     <>
-    <div className="faq-q">
-    <Disclosure>
-      {({ open }) => (
-        <>
-        <Disclosure.Button className="w-full rounded-t-md flex justify-between items-center px-1 py-3 hover:bg-blue-300">
-          <div className="text-xl font-semibold text-club-700 ">
-            {question}
-          </div>
-          <span className={open ? "text-club-400" : "text-gray-700"}>
-            {open ? <BiChevronUp className="text-2xl"/> : <BiChevronDown className="text-2xl"/>}
-          </span>
-        </Disclosure.Button>
+      <div className="faq-q">
+        <Disclosure>
+          {({ open }) => (
+            <>
+              <Disclosure.Button className="w-full rounded-t-md flex justify-between items-center px-1 py-3 hover:bg-blue-300">
+                <div className="text-xl font-semibold text-club-700 ">
+                  {question}
+                </div>
+                <span className={open ? "text-club-400" : "text-gray-700"}>
+                  {open ? (
+                    <BiChevronUp className="text-2xl" />
+                  ) : (
+                    <BiChevronDown className="text-2xl" />
+                  )}
+                </span>
+              </Disclosure.Button>
 
-        <Disclosure.Panel className="bg-blue-200 rounded-b-md">
-          <div className="px-2 pb-8 text-lg text-black">
-            {answer}
-          </div>
-        </Disclosure.Panel>
-        </>
-      )}
-    </Disclosure>
-    </div>
-  </>
+              <Disclosure.Panel className="bg-blue-200 rounded-b-md">
+                <div className="px-2 pb-8 text-lg text-black">{answer}</div>
+              </Disclosure.Panel>
+            </>
+          )}
+        </Disclosure>
+      </div>
+    </>
   );
 };
 

@@ -1,253 +1,211 @@
 import React, { useState } from "react";
+import Joi from "joi-browser";
+import emailjs from "emailjs-com";
+import img from "../../assets/contactUsImg.png";
+import "./Contact.css";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    phoneNumber: "",
-    department: "",
-    yearOfStudy: "",
-    isLocationPune: "",
-    question1: "",
-    question2: "",
+    subject: "",
+    message: "",
   });
 
-  const handleChange = name => e => {
-    // console.log(name);
-    // console.log(e.target.value);
-    setFormData({ ...formData, [name]: e.target.value });
+  const [formerrors, setFormErrors] = useState({});
+  const [submited, setSubmited] = useState(false);
+
+  const schema = {
+    name: Joi.string().trim().required().min(3).label("Name"),
+    email: Joi.string().trim().email().required().label("Email"),
+    subject: Joi.string().trim().required().min(5).label("Subject"),
+    message: Joi.string().trim().required().min(8).label("Message"),
   };
 
-  const handleSubmit = e => {
+  const validate = () => {
+    const result = Joi.validate(formData, schema, { abortEarly: false });
+    if (!result.error) return null;
+    const errors = {};
+    for (let item of result.error.details) {
+      errors[item.path[0]] = item.message;
+    }
+    return errors;
+  };
+
+  const validateProperty = input => {
+    const { name, value } = input;
+    const obj = { [name]: value };
+    const obj_schema = { [name]: schema[name] };
+    const result = Joi.validate(obj, obj_schema);
+    return result.error ? result.error.details[0].message : null;
+  };
+
+  const handleChange = e => {
+    const { currentTarget: input } = e;
+    const errors = { ...formerrors };
+    const errorMessage = validateProperty(input);
+    if (errorMessage) errors[input.name] = errorMessage;
+    else delete errors[input.name];
+
+    const data = { ...formData };
+    data[input.name] = input.value;
+    setFormData({ ...data, [input.name]: input.value });
+    setFormErrors(errors);
+  };
+
+  const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
+  const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID;
+  const USER_ID = process.env.REACT_APP_USER_ID;
+
+  const fetchApi = async e => {
+    const { name, email, subject, message } = formData;
+
+    if (!name || !email || !subject || !message) {
+      alert("Gotcha Error!");
+    } else {
+      emailjs
+        .sendForm(`${SERVICE_ID}`, `${TEMPLATE_ID}`, e.target, `${USER_ID}`)
+        .then(
+          result => {
+            console.log(result.text);
+          },
+          error => {
+            console.log(error.text);
+          }
+        );
+      alert("Recieved your valuable message 😄");
+    }
+  };
+
+  const handleSubmit = async e => {
     e.preventDefault();
-    console.log({ formData });
+    const errors = validate();
+    Object.keys(formData).map(key => {
+      if (formData[key] === "" || formData[key] === null) {
+        errors[key] = `${key} is required`;
+      }
+      return 0;
+    });
+    if (errors !== 0) {
+      setFormErrors(errors);
+    }
+    if (errors) {
+      setSubmited(false);
+    } else {
+      setSubmited(true);
+      fetchApi(e);
+      setFormData("");
+    }
   };
 
   return (
     <>
-      <div>
-        <div className="md:grid my-16">
-          <div className="lg:w-2/4 sm:w-full mt-5 lg:mx-auto items-center md:mt-0 ">
-            <form onSubmit={handleSubmit}>
-              <div className="shadow sm:rounded-md sm:overflow-hidden">
-                <div className="px-4 py-5 bg-white space-y-6 sm:p-6">
-                  <div className="grid mx-5 gap-6">
-                    <div className="col-span-3 sm:col-span-2">
-                      <label
-                        htmlFor="studentName"
-                        className="block text-sm font-medium text-gray-700"
-                      >
-                        Name
-                      </label>
-                      <div className="mt-1 flex rounded-md shadow-sm">
-                        <input
-                          type="text"
-                          name="studentName"
-                          id="studentName"
-                          className="p-2 border-2 border-indigo-500 outline-none flex-1 block w-full rounded-none rounded-r-md sm:text-sm"
-                          placeholder="Enter your name"
-                          onChange={handleChange("name")}
-                        />
-                      </div>
-                      <label
-                        htmlFor="studentName"
-                        className="block text-sm font-medium text-gray-700 mt-2"
-                      >
-                        Email
-                      </label>
-                      <div className="mt-1 flex rounded-md shadow-sm">
-                        <input
-                          type="email"
-                          name="studentEmail"
-                          id="studentEmail"
-                          className="p-2 border-2 border-indigo-500 outline-none flex-1 block w-full rounded-none rounded-r-md sm:text-sm"
-                          placeholder="Enter your email"
-                          onChange={handleChange("email")}
-                        />
-                      </div>
-                      <label
-                        htmlFor="studentName"
-                        className="block text-sm font-medium text-gray-700 mt-2"
-                      >
-                        Phone number
-                      </label>
-                      <div className="mt-1 flex rounded-md shadow-sm">
-                        <input
-                          type="number"
-                          name="studentPhoneNumber"
-                          id="studentPhoneNumber"
-                          className="p-2 border-2 border-indigo-500 outline-none flex-1 block w-full rounded-none rounded-r-md sm:text-sm"
-                          placeholder="Enter your phone number"
-                          onChange={handleChange("phoneNumber")}
-                        />
-                      </div>
-                      <label
-                        htmlFor="studentName"
-                        className="block text-sm font-medium text-gray-700 mt-2"
-                      >
-                        Department
-                      </label>
-                      <div className="mt-1 flex w-1/4 items-center">
-                        <input
-                          id="yearOfStudy"
-                          type="radio"
-                          name="yearOfStudy"
-                          className="p-2  outline-none flex-1 block w-full rounded-none rounded-r-md sm:text-sm"
-                          value="CS"
-                          onChange={handleChange("department")}
-                        />
-                        <p>Computer</p>
-                      </div>
-                      <div className="mt-1 flex w-1/4 items-center">
-                        <input
-                          id="yearOfStudy"
-                          type="radio"
-                          name="yearOfStudy"
-                          className="p-2  outline-none flex-1 block w-full rounded-none rounded-r-md sm:text-sm"
-                          value="MECH"
-                          onChange={handleChange("department")}
-                        />
-                        <p>Mechanical</p>
-                      </div>
-                      <div className="mt-1 flex w-1/4 items-center">
-                        <input
-                          id="yearOfStudy"
-                          type="radio"
-                          name="yearOfStudy"
-                          className="p-2  outline-none flex-1 block w-full rounded-none rounded-r-md sm:text-sm"
-                          value="E&TC"
-                          onChange={handleChange("department")}
-                        />
-                        <p>Electronics</p>
-                      </div>
-                      <label
-                        htmlFor="studentYearOfStudy"
-                        className="block text-sm font-medium text-gray-700 mt-2"
-                      >
-                        Year of study
-                      </label>
-                      <div className="mt-1 flex w-1/6 items-center">
-                        <input
-                          id="radio1"
-                          type="radio"
-                          name="radio"
-                          value="FE"
-                          className="p-2  outline-none flex-1 block w-full rounded-none rounded-r-md sm:text-sm"
-                          onChange={handleChange("yearOfStudy")}
-                        />
-                        <p>FE</p>
-                      </div>
-                      <div className="mt-1 flex w-1/6 items-center">
-                        <input
-                          id="radio1"
-                          type="radio"
-                          value="SE"
-                          name="radio"
-                          className="p-2  outline-none flex-1 block w-full rounded-none rounded-r-md sm:text-sm"
-                          onChange={handleChange("yearOfStudy")}
-                        />
-                        <p>SE</p>
-                      </div>
-                      <div className="mt-1 flex w-1/6 items-center">
-                        <input
-                          id="radio1"
-                          type="radio"
-                          value="TE"
-                          name="radio"
-                          className="p-2  outline-none flex-1 block w-full rounded-none rounded-r-md sm:text-sm"
-                          onChange={handleChange("yearOfStudy")}
-                        />
-                        <p>TE</p>
-                      </div>
-                      <div className="mt-1 flex w-1/6 items-center">
-                        <input
-                          id="radio1"
-                          type="radio"
-                          value="BE"
-                          name="radio"
-                          className="p-2  outline-none flex-1 block w-full rounded-none rounded-r-md sm:text-sm"
-                          onChange={handleChange("yearOfStudy")}
-                        />
-                        <p>BE</p>
-                      </div>
-                      <label
-                        htmlFor="studentName"
-                        className="block text-sm font-medium text-gray-700 mt-2"
-                      >
-                        Are you currently living in Pune?
-                      </label>
-                      <div className="mt-1 flex w-1/6 items-center">
-                        <input
-                          id="isLocationPune"
-                          type="radio"
-                          name="isLocationPune"
-                          className="p-2  outline-none flex-1 block w-full rounded-none rounded-r-md sm:text-sm"
-                          value="Yes"
-                          onChange={handleChange("isLocationPune")}
-                        />
-                        <p>Yes</p>
-                      </div>
-                      <div className="mt-1 flex w-1/6 items-center">
-                        <input
-                          id="isLocationPune"
-                          type="radio"
-                          name="isLocationPune"
-                          className="p-2  outline-none flex-1 block w-full rounded-none rounded-r-md sm:text-sm"
-                          value="No"
-                          onChange={handleChange("isLocationPune")}
-                        />
-                        <p>No</p>
-                      </div>
-                      <label
-                        htmlFor="about"
-                        className="block text-sm font-medium text-gray-700 mt-3"
-                      >
-                        What are the things that you would like to learn through
-                        this club?
-                      </label>
-                      <div className="mt-1">
-                        <textarea
-                          id="about"
-                          name="about"
-                          rows={3}
-                          className="shadow-sm p-2 border-2 border-indigo-500 outline-none mt-1 block w-full sm:text-sm rounded-md"
-                          placeholder="Your answer"
-                          defaultValue={""}
-                          onChange={handleChange("question1")}
-                        />
-                      </div>
-                      <label
-                        htmlFor="about"
-                        className="block text-sm font-medium text-gray-700 mt-3"
-                      >
-                        Why do you want to join this club ?
-                      </label>
-                      <div className="mt-1">
-                        <textarea
-                          id="about"
-                          name="about"
-                          rows={3}
-                          className="shadow-sm p-2 border-2 border-indigo-500 outline-none mt-1 block w-full sm:text-sm rounded-md"
-                          placeholder="Your answer"
-                          defaultValue={""}
-                          onChange={handleChange("question2")}
-                        />
-
-                        <div className="mt-3">
-                          <button
-                            type="submit"
-                            className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                            onSubmit={handleSubmit}
-                          >
-                            Submit
-                          </button>
-                        </div>
-                      </div>
-                    </div>
+      <div className="contact-section contact-section-dark">
+        <div className="contact-parent">
+          <div className="contact-child child1">
+            <img src={img} alt="" className="contact-image" />
+          </div>
+          <div className="contact-child child2">
+            {submited ? (
+              <React.Fragment>
+                <div className="goodbye-card">
+                  <h1 className="card-heading">Hello There !</h1>
+                  <div className="inside-card">
+                    <p
+                      style={{
+                        textAlign: "center",
+                      }}
+                    >
+                      We have heard you! 🤩 <br />
+                      We will get back to you very soon if required!
+                    </p>
                   </div>
                 </div>
-              </div>
-            </form>
+              </React.Fragment>
+            ) : (
+              <React.Fragment>
+                <div className="contact-card contact-card-dark">
+                  <h1 className="contact-header-text contact-header-text-dark">
+                    Get In Touch
+                  </h1>
+                  <div className="inside-contact">
+                    <form onSubmit={handleSubmit}>
+                      <div className="contact-input contact-input-dark">
+                        <input
+                          autoFocus="on"
+                          autoComplete="off"
+                          name="name"
+                          id="txt_name"
+                          type="text"
+                          placeholder="Your Name"
+                          onChange={handleChange}
+                        />
+                        <i className="fas fa-user"></i>
+                        {formerrors["name"] && (
+                          <div className="validation">
+                            * {formerrors["name"]}
+                          </div>
+                        )}
+                      </div>
+                      <div className="contact-input contact-input-dark">
+                        <input
+                          name="email"
+                          autoComplete="off"
+                          id="txt_email"
+                          type="text"
+                          placeholder="Your Email"
+                          onChange={handleChange}
+                        />
+                        <i className="fas fa-envelope-open-text"></i>
+                        {formerrors["email"] && (
+                          <div className="validation">
+                            * {formerrors["email"]}
+                          </div>
+                        )}
+                      </div>
+                      <div className="contact-input contact-input-dark">
+                        <input
+                          autoComplete="off"
+                          name="subject"
+                          id="txt_subject"
+                          type="text"
+                          placeholder="Your Subject"
+                          onChange={handleChange}
+                        />
+                        <i className="fas fa-pencil-alt"></i>
+                        {formerrors["subject"] && (
+                          <div className="validation">
+                            * {formerrors["subject"]}
+                          </div>
+                        )}
+                      </div>
+                      <div className="contact-input contact-input-dark">
+                        <textarea
+                          autoComplete="off"
+                          name="message"
+                          id="txt_message"
+                          rows="4"
+                          cols="20"
+                          placeholder="Your Message"
+                          onChange={handleChange}
+                        ></textarea>
+                        <i className="fas fa-comment-dots"></i>
+                        {formerrors["message"] && (
+                          <div className="validation">
+                            * {formerrors["message"]}
+                          </div>
+                        )}
+                      </div>
+                      <div>
+                        <button id="submit-btn" type="submit">
+                          Let's Talk!
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </React.Fragment>
+            )}
           </div>
         </div>
       </div>
