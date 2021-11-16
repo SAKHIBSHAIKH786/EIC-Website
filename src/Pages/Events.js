@@ -39,7 +39,7 @@ const Events = () => {
           </>
         </div>
       </div>
-      <div className="w-full mt-10 px-3 pt-3 ">
+      {/*<div className="w-full mt-10 px-3 pt-3 ">
         <div className="container mx-auto">
           <>
             <div className="w-full">
@@ -72,7 +72,7 @@ const Events = () => {
             </div>
           </>
         </div>
-      </div>
+      </div>*/}
     </>
   );
 };

@@ -33,9 +33,9 @@ const Register = () => {
                 className="imgWrapper"
                 style={{
                   position: "relative",
-                  top: "-180px",
+                  top: "-150px",
                   height: "0",
-                  marginBottom: "16px",
+                  marginBottom: "44px",
                 }}
               >
                 <img
@@ -49,31 +49,30 @@ const Register = () => {
                 />
               </div>
               <div
-                className="text-center"
+                className="text-center pb-4"
                 style={{
                   color: "#fff",
                   marginBottom: "16px !important",
                   textAlign: "center",
                 }}
               >
-                <h4 style={{ fontSize: "1.2rem" }}>
+                <h4 style={{ fontSize: "1.5rem" }}>
                   Join ElectroInfinity Club
                 </h4>
-                <p className="para-styles" style={{ fontSize: "1rem" }}>
+                <p className="para-styles" style={{ fontSize: "1.25rem" }}>
                   Meet students and educators excited about technology🚀
                 </p>
               </div>
 
-              <div className="linkToJoin" style={{ textAlign: "center" }}>
-                <a
-                  className="discordLink"
-                  href="https://forms.gle/fjxAKbc9vYUsCPHz6"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Register Now
-                </a>
-              </div>
+              {/*Club Register Link*/}              
+              <a
+                className="club-reg-link"
+                href="https://forms.gle/fjxAKbc9vYUsCPHz6"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Join the Club
+              </a>             
             </div>
           </div>
         </div>

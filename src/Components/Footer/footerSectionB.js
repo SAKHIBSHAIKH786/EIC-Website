@@ -11,8 +11,8 @@ const FooterSectionB = () => {
         </div>
         <div className="text-white text-left">
           <p className="text-lg font-semibold pb-2">Navigate</p>
-          <div>
-            <li >
+          <div className="pl-2">
+            <li>
               <Link to="/" className="hover:underline">
                 Home
               </Link>
