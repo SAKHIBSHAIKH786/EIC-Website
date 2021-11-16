@@ -17,41 +17,37 @@ function classNames(...classes) {
 
 const Navbar = () => {
   return (
-    <Disclosure as="nav" className="bg-transparent">
+    <Disclosure as="nav">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-            <div className="relative flex items-center justify-between h-16">
+            <div className="relative flex items-center h-16">
               <div className="absolute inset-y-0 right-0 mx-3 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
-                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-non outline-none ">
+                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 text-3xl hover:text-white hover:bg-gray-700 focus:outline-none outline-none">
                   {/* <span className="sr-only">Open main menu</span> */}
                   {open ? (
                     <IoCloseOutline
-                      className="block h-6 w-6"
+                      className="block"
                       aria-hidden="true"
                     />
                   ) : (
-                    <HiMenuAlt1 className="block h-6 w-6" aria-hidden="true" />
+                    <HiMenuAlt1 className="block" aria-hidden="true" />
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex-1 flex items-center mx-8 sm:items-stretch sm:justify-between">
-                <div className="flex-shrink-0 flex items-center">
+
+              <div className="flex-1 flex lg:items-center lg:items-stretch sm:justify-around lg:justify-end">
+                <div className="block md:hidden lg:hidden flex-shrink-0 flex items-center">
                   <NavLink to="/">
                     <img
-                      className="block lg:hidden h-12 w-auto rounded-3xl"
-                      src={logo}
-                      alt="ElectroInfinity"
-                    />
-                    <img
-                      className="hidden lg:block h-12 w-auto rounded-3xl"
+                      className="block lg:hidden h-12 w-auto rounded-full"
                       src={logo}
                       alt="ElectroInfinity"
                     />
                   </NavLink>
                 </div>
-                <div className="hidden sm:block sm:ml-6 mt-2">
+                <div className="hidden sm:block sm:ml-6">
                   <div className="flex space-x-4">
                     {navigation.map(item => (
                       <NavLink
@@ -60,11 +56,11 @@ const Navbar = () => {
                         className={classNames(
                           item.current
                             ? "bg-gray-900 text-white"
-                            : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                          "px-3 py-2 rounded-md text-sm font-medium"
+                            : "text-gray-300 hover:bg-club-50 hover:text-club-600",
+                          "px-3 py-1 rounded-md text-lg font-medium"
                         )}
                         exact
-                        activeClassName="bg-gray-900 text-white"
+                        activeClassName="bg-club-50 text-club-600"
                       >
                         {item.name}
                       </NavLink>

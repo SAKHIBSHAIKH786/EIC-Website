@@ -7,9 +7,9 @@ const FaqSection = () => {
   return (
     <>
       <section className="container py-10 faq-section">
-        <div className="w-full mx-auto my-10 px-10 bg-gray-200 flex flex-col gap-3 rounded-lg">
+        <div className="w-full mx-auto my-10 px-4 lg:px-10 bg-gray-200 flex flex-col gap-3 lg:rounded-lg">
 
-          <h2 className="faq text-5xl font-bold text-club-700 pt-4 text-center">
+          <h2 className="faq-title font-bold text-club-700 pt-1">
             FAQs
           </h2>
     
