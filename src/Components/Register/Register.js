@@ -8,6 +8,7 @@ const Register = () => {
       style={{
         padding: "120px 0 80px 0",
         width: "100%",
+        marginTop: "50px",
       }}
     >
       <div

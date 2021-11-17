@@ -149,14 +149,6 @@ nav {
   background-color: lightgray;
 }
 
-/* Club social links in Footer */
-.social:hover {
-  background-color: white;
-  color: #29488b;
-  transform: scale(1.3);
-  transition: all 200ms;
-}
-
 /* Responsive Styling */
 @media screen and (max-width: 480px) {
 	nav {

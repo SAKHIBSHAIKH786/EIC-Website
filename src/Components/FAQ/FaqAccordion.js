@@ -10,7 +10,7 @@ const FaqAccordion = ({ question, answer }) => {
           {({ open }) => (
             <>
               <Disclosure.Button className="w-full rounded-t-md flex justify-between items-center px-1 py-3 hover:bg-blue-300">
-                <div className="text-xl font-semibold text-club-700 ">
+                <div className="text-xl font-semibold text-club-700 text-left">
                   {question}
                 </div>
                 <span className={open ? "text-club-400" : "text-gray-700"}>
