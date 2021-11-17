@@ -2,7 +2,7 @@ import { Disclosure } from "@headlessui/react";
 import { HiMenuAlt1 } from "react-icons/hi";
 import { IoCloseOutline } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
-import logo from "../Footer/logo.png";
+import logo from "../../assets/logo.png";
 
 const navigation = [
   { name: "Home", href: "/" },
