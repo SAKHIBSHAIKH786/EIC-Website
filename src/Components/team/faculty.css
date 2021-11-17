@@ -30,7 +30,14 @@
 .faculty-name {
 	font-size: 1.875rem;
 	font-weight: bold;
-	padding: 0.25rem 0;
+	padding: 0.25em 0;
+}
+.faculty-name::after {
+	content: "";
+	display: block;
+	margin: 0.15rem 4rem 0 0;
+	height: 1px;
+	background-color: #1d3464;
 }
 
 .faculty-content {
@@ -39,6 +46,50 @@
 	flex-direction: column;
 	justify-content: flex-start;
 	gap: 0.25rem;
+}
+
+@media screen and (max-width: 992px) {
+	.faculty-container {
+		align-items: center;
+		gap: 3rem;
+	}
+
+	.faculty-card {
+		width: 45%;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	.faculty-image-container {
+		width: 100%;
+		height: 310px;
+		border-radius: 0.5rem 0.5rem 0 0;
+	}
+
+	.faculty-image {
+		height: 310px;
+		border-radius: 0.5rem 0.5rem 0 0;
+	}
+
+	.faculty-name {
+		padding: 0;
+	}
+	.faculty-name::after {
+		margin: 0.15rem 4rem;
+	}
+
+	.faculty-content {
+		width: 100%;
+		padding: 0 4px;
+	}
+	.faculty-content::after {
+		content: "";
+		display: block;
+		margin: 0 4rem;
+		height: 2px;
+		background-color: #1d3464;
+	}
 }
 
 @media screen and (max-width: 480px) {
@@ -70,11 +121,7 @@
 		padding: 0;
 	}
 	.faculty-name::after {
-		content: "";
-		display: block;
 		margin: 0.15rem 4rem;
-		height: 1px;
-		background-color: gray;
 	}
 
 	.faculty-content {
@@ -86,6 +133,6 @@
 		display: block;
 		margin: 0 4rem;
 		height: 2px;
-		background-color: gray;
+		background-color: #1d3464;
 	}
 }

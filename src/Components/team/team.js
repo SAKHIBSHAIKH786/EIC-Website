@@ -9,7 +9,7 @@ const TeamContainer = () => {
   return (
     <>
       <section className="container team-section">
-        <div className="container flex justify-center mx-auto pt-20 pb-12">
+        <div className="container flex justify-center mx-auto pt-20 md:pt-32 lg:pt-28 pb-12">
           <h1 className="text-white text-3xl text-center">
             OUR FACULTY
           </h1>

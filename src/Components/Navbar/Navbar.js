@@ -6,7 +6,6 @@ import logo from "../../assets/logo.png";
 
 const navigation = [
   { name: "Home", href: "/" },
-  // { name: "Events", href: "/events" },
   { name: "Team", href: "/team" },
   { name: "Contact", href: "/contact" },
 ];
@@ -37,7 +36,7 @@ const Navbar = () => {
                 </Disclosure.Button>
               </div>
 
-              <div className="flex-1 flex lg:items-center lg:items-stretch sm:justify-around lg:justify-end">
+              <div className="flex-1 flex lg:items-center lg:items-stretch sm:justify-around md:justify-end">
                 <div className="block md:hidden lg:hidden flex-shrink-0 flex items-center">
                   <NavLink to="/">
                     <img
@@ -48,7 +47,7 @@ const Navbar = () => {
                   </NavLink>
                 </div>
                 <div className="hidden sm:block sm:ml-6">
-                  <div className="flex space-x-4">
+                  <div className="flex gap-4 md:justify-end">
                     {navigation.map(item => (
                       <NavLink
                         key={item.name}
@@ -57,7 +56,7 @@ const Navbar = () => {
                           item.current
                             ? "bg-gray-900 text-white"
                             : "text-gray-300 hover:bg-club-50 hover:text-club-600",
-                          "px-3 py-1 rounded-md text-lg font-medium"
+                          "px-3 py-1 rounded-md md:text-xl lg:text-lg font-medium"
                         )}
                         exact
                         activeClassName="bg-club-50 text-club-600"

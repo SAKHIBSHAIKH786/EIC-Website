@@ -255,11 +255,23 @@
 }
 
 #submit-btn:hover {
-  background-color: #34345e;
+  background-color: #29488b;
   color: #fff;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 992px) {
+  .contact-section {
+    margin: 8em auto;
+  }
+  .contact-card {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact-section {
+    margin: 4em auto;
+  }
   .contact-parent {
     display: block;
     width: 100%;
