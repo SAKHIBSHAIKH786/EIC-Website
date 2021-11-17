@@ -62,6 +62,13 @@
 @media screen and (max-width: 900px) {
   .cardWrapper {
     padding: 35px;
-    margin: 0px;
+    margin: 0 auto;
+    max-width: 75%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cardWrapper {
+    max-width: 100%;
   }
 }

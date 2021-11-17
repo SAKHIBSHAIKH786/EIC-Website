@@ -60,25 +60,6 @@ button, a {
   background-size: cover;
 }
 
-/*.heroText {
-  font-size: 6rem;
-  color: white;
-  text-decoration-line: underline;
-  text-decoration-style: double;
-  text-decoration-color: #c2d1f0;
-  padding-top: 8%;
-  animation: slideInFromLeft 500ms ease-out 0s 1;
-}
-
-.heroSubText {
-  font-size: 2rem;
-  color: white;
-  text-decoration-line: underline;
-  text-decoration-style: solid;
-  text-decoration-color: #c2d1f0;
-  animation: slideInFromRight 500ms ease-out 0s 1;
-}*/
-
 .subHeroSection {
 	max-width: 80%;
 	margin: 0 auto;
@@ -110,7 +91,7 @@ nav {
   animation: slideInFromAbove 500ms ease-out 0s 1;
 }
 
-.nav-links {
+/*.nav-links {
   padding: 2px 4px;
   font-size: 1.5rem;
   color: #e8f0ff;
@@ -121,7 +102,7 @@ nav {
   background-color: #e8f0ff;
   color: #1d3464;
   transition: all 100ms;
-}
+}*/
 
 /* FAQ section */
 .faq-section {
@@ -150,6 +131,23 @@ nav {
 }
 
 /* Responsive Styling */
+@media screen and (max-width: 992px) {
+	nav {
+		position: fixed;
+		background: #0f1f3d;
+		box-shadow: 0px 8px 16px 0px rgba(72, 127, 255, 0.2),
+			0px -8px 16px 0px rgba(72, 127, 255, 0.2); 	
+	}
+	.hero {
+		background-image: url("./Components/HeroSection/heroTab.gif");
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+	.subHeroSection {
+		max-width: 100%;
+	}
+}
+
 @media screen and (max-width: 480px) {
 	nav {
 		position: fixed;
@@ -166,12 +164,6 @@ nav {
 	}
 
 	.faq-section {
-		max-width: 100%;
-	}
-}
-
-@media screen and (max-width: 768px) {
-	.subHeroSection {
 		max-width: 100%;
 	}
 }

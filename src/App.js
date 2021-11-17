@@ -19,7 +19,6 @@ const App = () => {
         <Route exact path="/" component={Home} />
         <Route path="/team" component={TeamContainer} />
         <Route path="/contact" component={Contact} />
-        {/* <Route path="*" component={PageNotFound} /> */}
       </Switch>
       <Footer />
     </BrowserRouter>
