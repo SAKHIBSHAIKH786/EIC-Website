@@ -104,7 +104,7 @@ export const TeamData = [
         lname: "Botre",
         post: "President",
         image: "https://raw.githubusercontent.com/Electro-Infinity-Club/Team-Member-Images/master/arnav.jpg",
-        bio: "Arnav is a pre-final year and a diligent and enthusiast student in the electronics domain. In his free time he loves hiking and playing sports.",
+        bio: "Arnav is a pre-final year and a diligent and enthusiast student in the electronics domain. In free time he loves hiking and playing sports.",
         instagram: "https://www.instagram.com/arnav_botre14/",
         linkedin: "https://www.linkedin.com/in/arnav-botre-b2a7591b2/",
         email: "botrearnav@gmail.com"

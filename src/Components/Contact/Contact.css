@@ -259,7 +259,7 @@
   color: #fff;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1024px) {
   .contact-section {
     margin: 8em auto;
   }

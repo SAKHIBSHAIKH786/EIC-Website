@@ -30,3 +30,9 @@
 		grid-column: 1 / span 2;
 	}
 }
+
+@media screen and (max-width: 320px) {
+	.footer-social-div {
+		gap: 1rem;
+	}
+}

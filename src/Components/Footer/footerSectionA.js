@@ -8,7 +8,7 @@ const FooterSectionA = () => {
       Follow us on our Social Media Platforms
     </div>
 
-    <div className="text-black font-semibold flex justify-center gap-6 md:gap-8">
+    <div className="footer-social-div text-black font-semibold flex justify-center gap-6 md:gap-8">
       <div className="flex flex-col gap-1 items-center w-16 h-12 text-white ">   
         <a href="https://github.com/Electro-Infinity-Club" 
           target="_blank" rel="noopener noreferrer" 

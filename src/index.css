@@ -91,19 +91,6 @@ nav {
   animation: slideInFromAbove 500ms ease-out 0s 1;
 }
 
-/*.nav-links {
-  padding: 2px 4px;
-  font-size: 1.5rem;
-  color: #e8f0ff;
-  border-radius: 6px;
-}
-
-.nav-links:hover {
-  background-color: #e8f0ff;
-  color: #1d3464;
-  transition: all 100ms;
-}*/
-
 /* FAQ section */
 .faq-section {
 	max-width: 80%;
@@ -131,7 +118,7 @@ nav {
 }
 
 /* Responsive Styling */
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1024px) {
 	nav {
 		position: fixed;
 		background: #0f1f3d;
