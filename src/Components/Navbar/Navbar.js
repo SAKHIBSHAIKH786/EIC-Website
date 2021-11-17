@@ -19,7 +19,7 @@ const Navbar = () => {
     <Disclosure as="nav">
       {({ open }) => (
         <>
-          <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+          <div className="mx-auto px-8 lg:px-16">
             <div className="relative flex items-center h-16">
               <div className="absolute inset-y-0 right-0 mx-3 flex items-center sm:hidden">
                 {/* Mobile menu button*/}

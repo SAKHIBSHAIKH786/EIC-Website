@@ -4,7 +4,7 @@ import "./faculty.css";
 const Faculty = () => {
 	return (
 		<>
-			<section className="container mb-12">
+			<section className="container mb-12 mx-auto">
 				<div className="faculty-container">
 					<div className="faculty-card">
 						<div className="faculty-image-container">

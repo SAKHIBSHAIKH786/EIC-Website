@@ -14,7 +14,7 @@ const TeamMembers = ({
 }) => {
   return (
     <>
-      <div className="relative w-11/12 md:w-1/2 lg:w-1/4 my-12">
+      <div className="relative team-card-main">
         <div className="rounded overflow-hidden shadow-md bg-club-50 team-card">
           <div className="absolute -mt-20 w-full flex justify-center">
             <div className="h-36 w-36">
