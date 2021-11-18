@@ -1,6 +1,10 @@
 import React from "react";
 import "./faculty.css";
 
+// Images
+import TiwariMam from "../../assets/faculty/tiwari-mam.webp";
+import YogitaMam from "../../assets/faculty/yogita-mam.webp";
+
 const Faculty = () => {
   return (
     <>
@@ -10,7 +14,7 @@ const Faculty = () => {
             <div className="faculty-image-container">
               <img
                 className="faculty-image"
-                src="https://github.com/Electro-Infinity-Club/Team-Member-Images/blob/master/faculty/Prof-KS-Tiwari.jpg?raw=true"
+                src={TiwariMam}
                 alt="professor"
               />
             </div>
@@ -31,7 +35,7 @@ const Faculty = () => {
             <div className="faculty-image-container">
               <img
                 className="faculty-image"
-                src="https://github.com/Electro-Infinity-Club/Team-Member-Images/blob/master/faculty/Prof-Yogita-Ajgar.jpg?raw=true"
+                src={YogitaMam}
                 alt="professor"
               />
             </div>

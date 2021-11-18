@@ -65,6 +65,11 @@ button, a {
   margin: 0 auto;
 }
 
+.about-slider {
+  width: 100%;
+  margin: 0 auto;
+}
+
 /*ToTopButton*/
 .float-button {
   position: fixed;
@@ -132,6 +137,10 @@ nav {
   }
   .subHeroSection {
     max-width: 100%;
+  }
+
+  .about-slider {
+    width: 85%;
   }
 }
 

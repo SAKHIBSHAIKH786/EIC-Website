@@ -50,7 +50,7 @@
   box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
   box-sizing: border-box;
   color: #FFFFFF;
-  display: flex;
+  /*display: flex;*/
   font-size: 1.25rem;
   justify-content: center;
   line-height: 1em;
@@ -83,7 +83,7 @@
   background: none;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1024px) {
   .event-card-section {
     width: 40%;
   }
@@ -94,5 +94,3 @@
     width: 90%;
   }
 }
-
-
