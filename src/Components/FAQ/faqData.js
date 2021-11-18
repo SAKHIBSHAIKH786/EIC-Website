@@ -7,7 +7,7 @@ export const faqs = [
   {
     id: 2,
     question: "Can I Join? How ?",
-    answer: "If you're reading the answer to this question, trust me you'll enjoy each of our events. Joining EIC is very simple, just click the "join the club" button above, fillout the form. Becoming a member of any club has never been so easy, has it ?",
+    answer: "If you're reading the answer to this question, trust me you'll enjoy each of our events. Joining EIC is very simple, just click the 'join the club' button above, fillout the form. Becoming a member of any club has never been so easy, has it ?",
   },
   {
     id: 3,
