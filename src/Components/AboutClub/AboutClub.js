@@ -43,7 +43,8 @@ export default function AboutClub() {
       <div className="hidden about-slider md:block">
         <Slider {...settings} >
           {clubData.map((data) => (        
-            <>
+            <React.Fragment key={data.id}>
+
               <div className="bg-club-800 h-68">
                 <div className="px-12 pt-4 gap-2 flex lg:px-16 lg:pt-6 lg:gap-4">
                   <img 
@@ -61,7 +62,8 @@ export default function AboutClub() {
                   </div>
                 </div>
               </div>
-            </>
+              
+            </React.Fragment>
           ))}
         </Slider>
       </div>
