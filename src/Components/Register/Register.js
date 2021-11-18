@@ -57,15 +57,13 @@ const Register = () => {
                   textAlign: "center",
                 }}
               >
-                <h4 style={{ fontSize: "1.5rem" }}>
-                  Join ElectroInfinity Club
-                </h4>
+                <h4 style={{ fontSize: "1.5rem" }}>ElectroInfinity Club</h4>
                 <p className="para-styles" style={{ fontSize: "1.25rem" }}>
-                  Meet students and educators excited about technology🚀
+                  Let's come together to build a better tomorrow🚀
                 </p>
               </div>
 
-              {/*Club Register Link*/}              
+              {/*Club Register Link*/}
               <a
                 className="club-reg-link"
                 href="https://forms.gle/fjxAKbc9vYUsCPHz6"
@@ -73,7 +71,7 @@ const Register = () => {
                 rel="noopener noreferrer"
               >
                 Join the Club
-              </a>             
+              </a>
             </div>
           </div>
         </div>

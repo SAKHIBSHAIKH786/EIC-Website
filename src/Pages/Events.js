@@ -26,7 +26,11 @@ const Events = () => {
                             eventObj.date.startDate
                           ).toDateString();
                           return (
-                            <EventCard event={eventObj} eventDate={eventDate} />
+                            <EventCard
+                              key={eventObj.id}
+                              event={eventObj}
+                              eventDate={eventDate}
+                            />
                           );
                         });
                       }
@@ -60,7 +64,11 @@ const Events = () => {
                             eventObj.date.startDate
                           ).toDateString();
                           return (
-                            <EventCard event={eventObj} eventDate={eventDate} />
+                            <EventCard
+                              key={eventObj.id}
+                              event={eventObj}
+                              eventDate={eventDate}
+                            />
                           );
                         });
                       }
