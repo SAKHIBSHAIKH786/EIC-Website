@@ -21,7 +21,11 @@ const EventCard = props => {
             </div>
             <p className="event-date">{event.date}</p>
             <p className="event-info">{event.info}</p>
-            <a href={event.link} className="event-reg-button"><span>Register</span></a>
+            <a 
+              href={event.link} target="_blank" rel="noopener noreferrer"
+              className={"event-reg-button " + (event.open ? "flex" : "hidden")}>
+              <span>Register</span>
+            </a>
           </div>
         </div>
       </section>
