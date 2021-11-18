@@ -1,4 +1,5 @@
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { useEffect } from "react";
+import { BrowserRouter, Route, Switch, useLocation } from "react-router-dom";
 
 // Components
 import Navbar from "./Components/Navbar/Navbar";
@@ -13,6 +14,7 @@ import Home from "./Pages/Home";
 const App = () => {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Navbar />
       <ToTopButton />
       <Switch>
@@ -23,6 +25,16 @@ const App = () => {
       <Footer />
     </BrowserRouter>
   );
+};
+
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [pathname]);
+
+  return null;
 };
 
 export default App;
