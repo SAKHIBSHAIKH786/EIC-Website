@@ -1,34 +1,25 @@
 {
   "upcoming": [
     {
-      "id": 1,
-      "img": "https://github.com/Electro-Infinity-Club/Team-Member-Images/blob/master/events/event-1.png?raw=true",
+      "id": 2,
+      "img": "/events/event-2.png",
       "title": "Electronics Essential",
       "date": "20th November 2021",
       "info": "Get yourself a practical hands-on session about basic components, breadboards, Arduino and connections and much more 💻. Do participate and get a chance to win amazing prizes💰and certificates. Join us on Saturday 20 November, 9.30 am at MESCOE Pune. See you there👋\nNote: The event is offline.",
       "link": "https://forms.gle/Nec9bQEWaoYaK9Xh6",
-      "open": "false"
+      "open": true
     }
   ],
 
   "past": [
     {
-      "id": 2,
-      "img": "",
-      "title": "",
-      "date": "",
-      "info": "",
+      "id": 1,
+      "img": "/events/event-1.jpg",
+      "title": "Induction Program",
+      "date": "17th September 2021",
+      "info": "Induction program about the information of the club and registration for new members",
       "link": "",
-      "open": "false"
-    },
-    {
-      "id": 3,
-      "img": "",
-      "title": "",
-      "date": "",
-      "info": "",
-      "link": "",
-      "open": "false"
+      "open": false
     }
   ]
 }
