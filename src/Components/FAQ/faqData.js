@@ -7,7 +7,7 @@ export const faqs = [
   {
     id: 2,
     question: "Can I Join? How ?",
-    answer: "If you're reading the answer to this question, trust me you'll enjoy each of our events.Joining EIC is very simple, just click the `join the club` button above, fillout the form.Becoming a member of any club has never been so easy, has it ?",
+    answer: "If you're reading the answer to this question, trust me you'll enjoy each of our events. Joining EIC is very simple, just click the "join the club" button above, fillout the form. Becoming a member of any club has never been so easy, has it ?",
   },
   {
     id: 3,
@@ -17,6 +17,6 @@ export const faqs = [
   {
     id: 4,
     question: "Are there any fees charged ?",
-    answer: "Do you think we can charge you for this? This is 21st century where you don't need to pay anything for knowledge.So, don't worry, we won't charge you for any of our events",
+    answer: "Do you think we can charge you for this? This is 21st century where you don't need to pay anything for knowledge. So, don't worry, we won't charge you for any of our events.",
   }
 ];
