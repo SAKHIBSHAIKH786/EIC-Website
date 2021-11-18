@@ -45,7 +45,8 @@ export default function AboutClub() {
           {clubData.map((data) => (        
             <React.Fragment key={data.id}>
 
-              <div className="bg-club-800 h-68">
+              <div className="h-68 p-8"
+                style={{ background: "rgb(0, 36, 54, 0.5)" }}>
                 <div className="px-12 pt-4 gap-2 flex lg:px-16 lg:pt-6 lg:gap-4">
                   <img 
                     className="py-2 w-60 h-40 items-center lg:w-80 lg:h-60" 
