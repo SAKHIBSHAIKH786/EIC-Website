@@ -47,15 +47,12 @@
     width: 100%;
   }
   .team-card {
-    height: 20.5rem;
+    height: 21.5rem;
   }
 }
 
 @media screen and (max-width: 380px) {
   .team-section {
     max-width: 90%;
-  }
-  .team-card {
-    height: 21.5rem;
   }
 }
