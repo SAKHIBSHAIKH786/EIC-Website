@@ -93,7 +93,7 @@
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 540px) {
   .faculty-container {
     flex-direction: column;
     align-items: center;

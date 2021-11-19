@@ -12,9 +12,13 @@
   box-shadow: rgba(0, 0, 0, 0.5) 2px 3px 4px 0px inset, rgba(0, 0, 0, 0.5) -2px -3px 4px 0px inset;
 }
 
-.team-social:hover {
-  transform: scale(1.2);
+.team-social {
   transition: transform 100ms linear;
+  cursor: pointer;
+}
+.team-social:hover, .team-social:focus {
+  color: rgb(96, 165, 250);
+  transform: scale(1.2);
 }
 
 .member-image {
@@ -30,12 +34,18 @@
   }
 }
 
+@media screen and (max-width: 992px) {
+  .team-card {
+    height: 24rem;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .team-section {
     max-width: 80%;
   }
   .team-card-main {
-    width: 70%;
+    width: 80%;
   }
   .team-card {
     height: 20rem;
