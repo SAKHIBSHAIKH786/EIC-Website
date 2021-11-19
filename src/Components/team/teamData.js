@@ -12,17 +12,6 @@ import vaishnavi from "../../assets/team-cores/vaishnavi.webp";
 export const TeamData = [
   {
     id: 10,
-    fname: "Akash",
-    lname: "Bondare",
-    post: "Student Co-ordinator",
-    image: akash,
-    bio: "I am a third-year student and have an interest in Electronics. I am a Passionate learner looking forward to learning new and exciting things.",
-    instagram: "https://www.instagram.com/_akash_b08/",
-    linkedin: "https://www.linkedin.com/in/akash-bondare-53a6451a5",
-    email: "akashbondare504@gmail.com"
-  },
-  {
-    id: 9,
     fname: "Sanvidha",
     lname: "Haribhakta",
     post: "Student Co-ordinator",
@@ -31,6 +20,17 @@ export const TeamData = [
     instagram: "https://www.instagram.com/sanvidha_/",
     linkedin: "https://www.linkedin.com/in/sanvidha-haribhakta-12a215213/",
     email: "haribhaktasanvidha@gmail.com"
+  },
+  {
+    id: 9,
+    fname: "Akash",
+    lname: "Bondare",
+    post: "Student Co-ordinator",
+    image: akash,
+    bio: "I am a third-year student and have an interest in Electronics. I am a Passionate learner looking forward to learning new and exciting things.",
+    instagram: "https://www.instagram.com/_akash_b08/",
+    linkedin: "https://www.linkedin.com/in/akash-bondare-53a6451a5",
+    email: "akashbondare504@gmail.com"
   },
   {
     id: 8,
@@ -45,6 +45,17 @@ export const TeamData = [
   },
   {
     id: 7,
+    fname: "Rohan",
+    lname: "Gilbile",
+    post: "Publicity Co-ordinator",
+    image: rohan,
+    bio: "I'm a third-year undergraduate who loves to work in various communities and get to learn new things. I love spending time on beaches.",
+    instagram: "https://www.instagram.com/gilbile_rohan/",
+    linkedin: "https://www.linkedin.com/in/rohan-gilbile-63999b190/",
+    email: "rohangilbile123@gmail.com"
+  },
+  {
+    id: 6,
     fname: "Ramsha",
     lname: "Shaikh",
     post: "Event Co-ordinator",
@@ -55,7 +66,7 @@ export const TeamData = [
     email: "ramshashaikh777@gmail.com"
   },
   {
-    id: 6,
+    id: 5,
     fname: "Hemant",
     lname: "Mankar",
     post: "Social Media Head",
@@ -66,18 +77,7 @@ export const TeamData = [
     email: "hemantmankar007@gmail.com"
   },
   {
-    id: 5,
-    fname: "Rohan",
-    lname: "Gilbile",
-    post: "Publicity Co-ordinator",
-    image: rohan,
-    bio: "I'm a third-year undergraduate who loves to work in various communities and get to learn new things. I love spending time on beaches.",
-    instagram: "https://www.instagram.com/gilbile_rohan/",
-    linkedin: "https://www.linkedin.com/in/rohan-gilbile-63999b190/",
-    email: "rohangilbile123@gmail.com"
-  },  
-  {
-    id: 2,
+    id: 4,
     fname: "Swapnil",
     lname: "Chougule",
     post: "Vice President",
@@ -99,7 +99,7 @@ export const TeamData = [
     email: "akshadas.001@gmail.com"
   },
   {
-    id: 4,
+    id: 2,
     fname: "Disha",
     lname: "Gaikwad",
     post: "Treasurer",
@@ -113,7 +113,7 @@ export const TeamData = [
     id: 1,
     fname: "Arnav",
     lname: "Botre",
-    post: "President",
+    post: "Founder & President",
     image: arnav,
     bio: "Arnav is a pre-final year and a diligent and enthusiast student in the electronics domain. In free time he loves hiking and playing sports.",
     instagram: "https://www.instagram.com/arnav_botre14/",

@@ -35,7 +35,7 @@ const TeamMembers = ({
             <div className="w-full flex justify-center gap-6 text-xl absolute inset-x-0 bottom-5">
               <a
                 href={"mailto:" + email}
-                className="team-social cursor-pointer hover:text-blue-400"
+                className="team-social"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -43,7 +43,7 @@ const TeamMembers = ({
               </a>
               <a
                 href={instagram}
-                className="team-social cursor-pointer hover:text-blue-400"
+                className="team-social"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -51,7 +51,7 @@ const TeamMembers = ({
               </a>
               <a
                 href={linkedin}
-                className="team-social cursor-pointer hover:text-blue-400"
+                className="team-social"
                 target="_blank"
                 rel="noopener noreferrer"
               >

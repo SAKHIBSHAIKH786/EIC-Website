@@ -8,7 +8,7 @@
 }
 
 /* Club social links */
-.social:hover {
+.social:hover, .social:focus {
   background-color: white;
   color: #29488b;
   transform: scale(1.3);

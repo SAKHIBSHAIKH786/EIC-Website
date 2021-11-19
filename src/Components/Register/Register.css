@@ -10,7 +10,6 @@
   background-color: #1d3464 ;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 8px;
-  /* box-shadow: 0px 3px 15px rgb(72 127 255 / 40%); */
   box-shadow: rgb(255, 174, 66) 3px 3px 6px 0px inset, rgba(255, 174, 66, 0.5) -3px -3px 6px 1px inset;
   border-collapse: separate;
 }
@@ -54,7 +53,7 @@
   transition: background-position 500ms ease-in-out;
 }
 
-.club-reg-link:hover {
+.club-reg-link:hover, .club-reg-link:focus {
   background-position: right;
   cursor: pointer;
 }

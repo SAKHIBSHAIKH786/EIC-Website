@@ -55,7 +55,7 @@ const Navbar = () => {
                         className={classNames(
                           item.current
                             ? "bg-gray-900 text-white"
-                            : "text-gray-300 hover:bg-club-50 hover:text-club-600",
+                            : "text-gray-300 hover:bg-club-50 hover:text-club-600 focus:bg-club-50 focus:text-club-600",
                           "px-3 py-1 rounded-md md:text-xl lg:text-lg font-medium"
                         )}
                         exact
@@ -80,7 +80,7 @@ const Navbar = () => {
                   className={classNames(
                     item.current
                       ? "bg-gray-900 text-white"
-                      : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                      : "text-gray-300 hover:bg-gray-700 hover:text-white focus:bg-gray-700 focus:text-white",
                     "block px-3 py-2 rounded-md text-base font-medium text-center"
                   )}
                   exact
