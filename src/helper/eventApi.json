@@ -1,17 +1,18 @@
 {
   "upcoming": [
+    {"id": 0}
+  ],
+
+  "past": [
     {
       "id": 3,
       "img": "/events/event-3.png",
       "title": "Electronics Essential",
       "date": "20th November 2021",
-      "info": "Get yourself a practical hands-on session about basic components, breadboards, Arduino and connections and much more 💻. Do participate and get a chance to win amazing prizes💰and certificates. Join us on Saturday 20 November, 9.30 am at MESCOE Pune. See you there👋\nNote: The event is offline.",
-      "link": "https://forms.gle/Nec9bQEWaoYaK9Xh6",
-      "open": true
-    }
-  ],
-
-  "past": [
+      "info": "Students were given a practical hands-on session about basic components, breadboards, Arduino and connections and much more 💻.\nNote: This was an offline event.",
+      "link": "",
+      "open": false
+    },
     {
       "id": 2,
       "img": "/events/event-2.png",

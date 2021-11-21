@@ -3,6 +3,7 @@ import { FiInstagram, FiMail, FiLinkedin } from "react-icons/fi";
 import "./teamMemberCard.css";
 
 const TeamMembers = ({
+  id,
   fname,
   lname,
   post,
@@ -14,7 +15,7 @@ const TeamMembers = ({
 }) => {
   return (
     <>
-      <div className="relative team-card-main">
+      <div className={"relative team-card-main " + (id === 1 ? "md:col-start-2" : (id === 2 ? "col-start-1" : ""))}>
         <div className="rounded overflow-hidden shadow-md bg-club-50 team-card">
           <div className="absolute -mt-20 w-full flex justify-center">
             <div className="h-36 w-36">
