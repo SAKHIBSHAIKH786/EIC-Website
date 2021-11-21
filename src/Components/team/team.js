@@ -8,15 +8,15 @@ const TeamContainer = () => {
 
   return (
     <>
-      <section className="container team-section">
-        <div className="container flex justify-center mx-auto pt-20 md:pt-32 lg:pt-28 pb-12">
+      <section className="container team-section-main">
+        <div className="container mx-auto pt-20 md:pt-32 lg:pt-28 pb-12">
           <h1 className="text-white text-3xl text-center">
             OUR FACULTY
           </h1>
         </div>
         <Faculty />
-        <div className="container flex justify-center mx-auto pt-20">
-          <h1 className="text-white text-3xl text-center pb-6">
+        <div className="container mx-auto pt-20 pb-6 lg:pr-6">
+          <h1 className="text-white text-3xl text-center">
             MEET OUR TEAM
           </h1>
         </div>
@@ -24,7 +24,7 @@ const TeamContainer = () => {
         {/* <TeamMember /> */}
         <div className="w-full mt-10 px-3 pt-3 ">
           <div className="container mx-auto">
-            <div className="flex flex-wrap-reverse justify-center gap-6">
+            <div className="team-section">
               {data.map(info => (
                 <TeamMembers key={info.id} {...info} />
               ))}
