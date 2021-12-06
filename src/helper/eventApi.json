@@ -1,6 +1,14 @@
 {
   "upcoming": [
-    {"id": 0}
+    {
+      "id": 4,
+      "img": "/events/event-4.jpg",
+      "title": "Internet of Things and it's Applications",
+      "date": "10th December 2021",
+      "info": "This workshop will help you to learn and explore the internet of things, so don't miss this opportunity.",
+      "link": "https://forms.gle/NGzp2TPcB3q9bdPP7",
+      "open": true
+    }
   ],
 
   "past": [
