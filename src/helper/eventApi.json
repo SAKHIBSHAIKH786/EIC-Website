@@ -1,5 +1,9 @@
 {
   "upcoming": [
+    {"id": 0}
+  ],
+
+  "past": [
     {
       "id": 4,
       "img": "/events/event-4.jpg",
@@ -8,10 +12,7 @@
       "info": "This workshop will help you to learn and explore the internet of things, so don't miss this opportunity.",
       "link": "https://forms.gle/NGzp2TPcB3q9bdPP7",
       "open": true
-    }
-  ],
-
-  "past": [
+    },
     {
       "id": 3,
       "img": "/events/event-3.png",
