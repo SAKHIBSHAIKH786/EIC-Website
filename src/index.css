@@ -63,6 +63,8 @@ button, a {
   height: 100vh;
   background-image: url("./Components/HeroSection/heroBG.gif");
   background-size: cover;
+  background-position: center;
+  background-color: #001824;
 }
 
 .subHeroSection {
