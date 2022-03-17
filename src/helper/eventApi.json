@@ -1,6 +1,14 @@
 {
   "upcoming": [
-    {"id": 0}    
+    {
+      "id": 6,
+      "img": "/events/event-6.png",
+      "title": "Rocket Boys Stream Party",
+      "date": "21-24 March 2022",
+      "info": "Electro Infinity Club presents live streaming of web series based on life of Dr. Homi Jehangir Bhabha and Dr. Vikram Ambalal Sarabhai, who created history while building India's future.",
+      "link": "https://forms.gle/J4PaYGykKKBCFtrz8",
+      "open": true
+    }    
   ],
 
   "past": [
